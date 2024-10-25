@@ -46,11 +46,4 @@ public class _00_DataBase {
         }
     }
 
-    @And("User delete the element from Dialog")
-    public void userDeleteTheElementFromDialog(DataTable dtSilinecekler) {
-        List<String> listSilinecekler = dtSilinecekler.asList();
-        for (int i = 0; i < listSilinecekler.size(); i++) {
-            dc.deleteItem(listSilinecekler.get(i));
-        }
-    }
 }
