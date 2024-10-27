@@ -34,8 +34,6 @@ public class DialogContent extends ParentPage{
     @FindBy(id = "email-error")
     public WebElement emailErrorText;
 
-
-
     @FindBy(xpath = "(//div[@role='alert']//div)[2]")
     public WebElement passwordErrorText;
 
@@ -45,8 +43,47 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[data-ui-id='page-title-wrapper']")
     public WebElement forgetPasswordText;
 
+    @FindBy(xpath = "(//a[text()='My Account'])[1]")
+    public WebElement myAccountButton;
 
+    @FindBy(xpath = "//span[text()='Manage Addresses']")
+    public WebElement manageAddressesButton;
 
+    @FindBy(xpath = "//span[text()='Add New Address']")
+    public WebElement addNewAddressButton;
+
+    @FindBy(xpath = "//input[@id='telephone']")
+    public WebElement telephoneInput;
+
+    @FindBy(xpath = "//input[@id='street_1']")
+    public WebElement street1Input;
+
+    @FindBy(xpath = "//input[@id='city']")
+    public WebElement cityInput;
+
+    @FindBy(xpath = "//select[@id='region_id']")
+    public WebElement regionIdInput;
+
+    @FindBy(xpath = "//input[@id='zip']")
+    public WebElement zipInput;
+
+    @FindBy(xpath = "//span[text()='Save Address']")
+    public WebElement saveAddressButton;
+
+    @FindBy(xpath = "//input[@id='primary_billing']")
+    public WebElement defaultBilling;
+
+    @FindBy(xpath = "//input[@id='primary_shipping']")
+    public WebElement defaultShipping;
+
+    @FindBy(xpath = "//span[text()='Delete']")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//span[text()='OK']")
+    public WebElement deleteOk;
+
+    @FindBy(css = "[data-bind*='message.text']")
+    public WebElement messageText;
 
     public WebElement getWebElement(String strElementName) {
         switch (strElementName.trim()){
@@ -58,6 +95,20 @@ public class DialogContent extends ParentPage{
             case "customerMenuDropDown": return this.customerMenuDropDown;
             case "signOut": return this.signOut;
             case "forgetPasswordButton": return this.forgetPasswordButton;
+            case "myAccountButton":return this.myAccountButton;
+            case "manageAddressesButton": return this.manageAddressesButton;
+            case "addNewAddressButton": return this.addNewAddressButton;
+            case "telephoneInput": return this.telephoneInput;
+            case "street1Input": return this.street1Input;
+            case "cityInput": return this.cityInput;
+            case "regionIdInput": return this.regionIdInput;
+            case "zipInput": return this.zipInput;
+            case "saveAddressButton": return this.saveAddressButton;
+            case "defaultBilling": return this.defaultBilling;
+            case "defaultShipping": return this.defaultShipping;
+            case "deleteButton": return this.deleteButton;
+            case "deleteOk": return this.deleteOk;
+            case "messageText": return this.messageText;
 
         }
         return null;
