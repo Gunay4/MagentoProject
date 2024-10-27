@@ -138,6 +138,36 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[aria-label='store logo']")
     public WebElement homePage;
 
+    @FindBy(xpath = "(//img[@class='product-image-photo'])[6]")
+    public WebElement fusionBackpack;
+
+    @FindBy(xpath = "(//button[@title='Add to Cart'])[5]")
+    public WebElement addToCart;
+
+    @FindBy(css = "[class='counter-number']")
+    public WebElement counterNumber;
+
+    @FindBy(css = "[class='action showcart']")
+    public WebElement basket;
+
+    @FindBy(css = "[id='top-cart-btn-checkout']")
+    public WebElement proceedToCheckout;
+
+    @FindBy(css = "[type='radio']")
+    public  WebElement shippingMethods;
+
+    @FindBy(css = "[data-role='opc-continue']")
+    public WebElement nextButton;
+
+    @FindBy(css = "[class='action primary checkout']")
+    public WebElement placeOrder;
+
+
+
+
+
+
+
 
     public WebElement getWebElement(String strElementName) {
         switch (strElementName.trim()){
@@ -176,6 +206,14 @@ public class DialogContent extends ParentPage{
             case "arcCartQty": return this.arcCartQty;
             case "arcUpdate": return this.arcUpdate;
             case "arcGoToCart": return this.arcGoToCart;
+            case "fusionBackpack": return this.fusionBackpack;
+            case "addToCart": return this.addToCart;
+            case "basket": return this.basket;
+            case "proceedToCheckout": return this.proceedToCheckout;
+            case "shippingMethods": return this.shippingMethods;
+            case "nextButton": return this.nextButton;
+            case "placeOrder": return this.placeOrder;
+
         }
         return null;
     }
