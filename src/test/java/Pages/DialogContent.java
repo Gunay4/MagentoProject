@@ -162,11 +162,26 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[class='action primary checkout']")
     public WebElement placeOrder;
 
+    @FindBy(xpath = "//ul[@class='header links']/li/a[text()='Create an Account']")
+    public WebElement createAccount;
 
+    @FindBy(id = "firstname")
+    public WebElement firstName;
 
+    @FindBy(id = "lastname")
+    public WebElement lastName;
 
+    @FindBy(id = "email_address")
+    public WebElement emailAddress;
 
+    @FindBy(id = "password")
+    public WebElement registrationPassword;
 
+    @FindBy(id = "password-confirmation")
+    public WebElement passwordConfirmation;
+
+    @FindBy(xpath = "//*[@id='form-validate']/div/div[1]/button/span")
+    public WebElement registerButton;
 
 
     public WebElement getWebElement(String strElementName) {
@@ -213,6 +228,14 @@ public class DialogContent extends ParentPage{
             case "shippingMethods": return this.shippingMethods;
             case "nextButton": return this.nextButton;
             case "placeOrder": return this.placeOrder;
+            case "createAccount": return this.createAccount;
+            case "firstName": return this.firstName;
+            case "lastName": return this.lastName;
+            case "emailAddress": return this.emailAddress;
+            case "registrationPassword": return this.registrationPassword;
+            case "passwordConfirmation": return this.passwordConfirmation;
+            case "registerButton": return this.registerButton;
+
 
         }
         return null;
