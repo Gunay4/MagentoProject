@@ -138,7 +138,7 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[aria-label='store logo']")
     public WebElement homePage;
 
-    @FindBy(xpath = "(//img[@class='product-image-photo'])[6]")
+    @FindBy(xpath = "(//img[@class='product-image-photo'])[5]")
     public WebElement fusionBackpack;
 
     @FindBy(xpath = "(//button[@title='Add to Cart'])[5]")
@@ -183,6 +183,29 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//*[@id='form-validate']/div/div[1]/button/span")
     public WebElement registerButton;
 
+    @FindBy(id = "search")
+    public WebElement searchInput;
+
+    @FindBy(css = "[title='Search']")
+    public WebElement searchButton;
+
+    @FindBy(css = "[class='page-title'] span")
+    public WebElement skuNumberText1;
+
+    @FindBy(xpath = "//span[text()='Men']")
+    public WebElement Man;
+
+    @FindBy(xpath = "(//span[text()='Tops'])[2]")
+    public WebElement tops;
+
+    @FindBy(xpath = "(//span[text()='Jackets'])[2]")
+    public WebElement jacketsButton;
+
+    @FindBy(css = "[alt='Lando Gym Jacket']")
+    public WebElement landoGmyJacketImg;
+
+    @FindBy(css = "[itemprop='sku']")
+    public WebElement skuNumberText2;
 
     public WebElement getWebElement(String strElementName) {
         switch (strElementName.trim()){
@@ -235,6 +258,12 @@ public class DialogContent extends ParentPage{
             case "registrationPassword": return this.registrationPassword;
             case "passwordConfirmation": return this.passwordConfirmation;
             case "registerButton": return this.registerButton;
+            case "searchInput": return this.searchInput;
+            case "searchButton": return this.searchButton;
+            case "Man": return this.Man;
+            case "tops": return this.tops;
+            case "jacketsButton": return this.jacketsButton;
+            case "landoGmyJacketImg": return this.landoGmyJacketImg;
 
 
         }

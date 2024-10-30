@@ -13,8 +13,6 @@ Feature: Product Order Functionality
 
   Scenario: Order Verification
 
-    And Click on the Element in Dialog for addToCart
-
     And Shopping transaction in Dialog
 
     And Click on the Element in Dialog
