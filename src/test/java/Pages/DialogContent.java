@@ -207,6 +207,24 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[itemprop='sku']")
     public WebElement skuNumberText2;
 
+    @FindBy(xpath = "//a[@class='action towishlist' and @data-action='add-to-wishlist']")
+    public WebElement wishAddButton;
+
+    @FindBy(xpath = "//*[@id='wishlist-view-form']/div[1]")
+    public WebElement wishListNotEmpty;
+
+    @FindBy(xpath = "//img[@class='product-image-photo' and @alt='Radiant Tee']")
+    public WebElement wishListProduct;
+
+    @FindBy(css = "a[title='Remove Item']")
+    public WebElement wishRemoveButton;
+
+
+
+
+
+
+
     public WebElement getWebElement(String strElementName) {
         switch (strElementName.trim()){
             case "signIn": return this.signIn;
@@ -264,6 +282,10 @@ public class DialogContent extends ParentPage{
             case "tops": return this.tops;
             case "jacketsButton": return this.jacketsButton;
             case "landoGmyJacketImg": return this.landoGmyJacketImg;
+            case "wishAddButton": return this.wishAddButton;
+            case "wishListNotEmpty": return this.wishListNotEmpty;
+            case "wishListProduct": return this.wishListProduct;
+            case "wishRemoveButton": return this.wishRemoveButton;
 
 
         }
