@@ -219,6 +219,39 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "a[title='Remove Item']")
     public WebElement wishRemoveButton;
 
+    @FindBy(xpath = "//span[text()='What's New']")
+    public WebElement whatsNew;
+
+    @FindBy(xpath = "//a[@href='https://magento.softwaretestingboard.com/' and @title='Go to Home Page']")
+    public WebElement homeButton;
+
+    @FindBy(xpath = "//span[text()='Women']") // Women
+    public WebElement women;
+
+    @FindBy(xpath = "//span[text()='Men']") // Men
+    public WebElement men;
+
+    @FindBy(xpath = "//span[text()='Gear']") // Gear
+    public WebElement gear;
+
+    @FindBy(xpath = "//span[text()='Training']")
+    public WebElement training;
+
+    @FindBy(xpath = "//span[text()='Sale']")
+    public WebElement sale;
+
+    @FindBy(xpath = "(//span[text()='Tops'])[1]")
+    public WebElement womenTops;
+
+    @FindBy(xpath = "(//span[text()='Bottoms'])[1]")
+    public WebElement womenBottoms;
+
+    @FindBy(xpath = "(//span[text()='Tops'])[2]")
+    public WebElement menTops;
+
+    @FindBy(xpath = "(//span[text()='Bottoms'])[2]")
+    public WebElement menBottoms;
+
 
 
 
@@ -286,6 +319,17 @@ public class DialogContent extends ParentPage{
             case "wishListNotEmpty": return this.wishListNotEmpty;
             case "wishListProduct": return this.wishListProduct;
             case "wishRemoveButton": return this.wishRemoveButton;
+            case "whatsNew": return this.whatsNew;
+            case "women": return this.women;
+            case "men": return this.men;
+            case "gear": return this.gear;
+            case "training": return this.training;
+            case "sale": return this.sale;
+            case "womenTops": return this.womenTops;
+            case "womenBottoms": return this.womenBottoms;
+            case "homeButton": return this.homeButton;
+            case "menTops": return this.menTops;
+            case "menBottoms": return this.menBottoms;
 
 
         }
