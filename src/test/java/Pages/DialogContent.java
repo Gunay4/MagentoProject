@@ -1,15 +1,17 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DialogContent extends ParentPage{
+public class DialogContent extends ParentPage {
+
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "((//ul[@class='header links'])[1]//a)[2]")
@@ -87,13 +89,13 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[data-bind*='message.text']")
     public WebElement messageText;
 
-    @FindBy(xpath= "//ol[@class='product-items widget-product-grid']//img[@class='product-image-photo']")
+    @FindBy(xpath = "//ol[@class='product-items widget-product-grid']//img[@class='product-image-photo']")
     public WebElement arcProduct1;
 
-    @FindBy(xpath= "(//ol[@class='product-items widget-product-grid']//img[@class='product-image-photo'])[2]")
+    @FindBy(xpath = "(//ol[@class='product-items widget-product-grid']//img[@class='product-image-photo'])[2]")
     public WebElement arcProduct2;
 
-    @FindBy(css= "[title='Add to Cart']")
+    @FindBy(css = "[title='Add to Cart']")
     public WebElement arcAdd;
 
     @FindBy(css = "[class='swatch-option text']")
@@ -138,7 +140,7 @@ public class DialogContent extends ParentPage{
     @FindBy(css = "[aria-label='store logo']")
     public WebElement homePage;
 
-    @FindBy(xpath = "(//img[@class='product-image-photo'])[5]")
+    @FindBy(xpath = "(//img[@class='product-image-photo'])[6]")
     public WebElement fusionBackpack;
 
     @FindBy(xpath = "(//button[@title='Add to Cart'])[5]")
@@ -154,7 +156,7 @@ public class DialogContent extends ParentPage{
     public WebElement proceedToCheckout;
 
     @FindBy(css = "[type='radio']")
-    public  WebElement shippingMethods;
+    public WebElement shippingMethods;
 
     @FindBy(css = "[data-role='opc-continue']")
     public WebElement nextButton;
@@ -183,50 +185,44 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//*[@id='form-validate']/div/div[1]/button/span")
     public WebElement registerButton;
 
-    @FindBy(id = "search")
-    public WebElement searchInput;
+    @FindBy(xpath = "//span[text()='What's New']")
+    public WebElement whatsNew;
 
-    @FindBy(css = "[title='Search']")
-    public WebElement searchButton;
+    @FindBy(xpath = "//a[@href='https://magento.softwaretestingboard.com/' and @title='Go to Home Page']")
+    public WebElement homeButton;
 
-    @FindBy(css = "[class='page-title'] span")
-    public WebElement skuNumberText1;
+    @FindBy(xpath = "//span[text()='Women']") // Women
+    public WebElement women;
 
-    @FindBy(xpath = "//span[text()='Men']")
-    public WebElement Man;
+    @FindBy(xpath = "//span[text()='Men']") // Men
+    public WebElement men;
+
+    @FindBy(xpath = "//span[text()='Gear']") // Gear
+    public WebElement gear;
+
+    @FindBy(xpath = "//span[text()='Training']")
+    public WebElement training;
+
+    @FindBy(xpath = "//span[text()='Sale']")
+    public WebElement sale;
+
+    @FindBy(xpath = "(//span[text()='Tops'])[1]")
+    public WebElement womenTops;
+
+    @FindBy(xpath = "(//span[text()='Bottoms'])[1]")
+    public WebElement womenBottoms;
 
     @FindBy(xpath = "(//span[text()='Tops'])[2]")
-    public WebElement tops;
+    public WebElement menTops;
 
-    @FindBy(xpath = "(//span[text()='Jackets'])[2]")
-    public WebElement jacketsButton;
-
-    @FindBy(css = "[alt='Lando Gym Jacket']")
-    public WebElement landoGmyJacketImg;
-
-    @FindBy(css = "[itemprop='sku']")
-    public WebElement skuNumberText2;
-
-    @FindBy(xpath = "//a[@class='action towishlist' and @data-action='add-to-wishlist']")
-    public WebElement wishAddButton;
-
-    @FindBy(xpath = "//*[@id='wishlist-view-form']/div[1]")
-    public WebElement wishListNotEmpty;
-
-    @FindBy(xpath = "//img[@class='product-image-photo' and @alt='Radiant Tee']")
-    public WebElement wishListProduct;
-
-    @FindBy(css = "a[title='Remove Item']")
-    public WebElement wishRemoveButton;
-
-
-
+    @FindBy(xpath = "(//span[text()='Bottoms'])[2]")
+    public WebElement menBottoms;
 
 
 
 
     public WebElement getWebElement(String strElementName) {
-        switch (strElementName.trim()){
+        switch (strElementName.trim()) {
             case "signIn": return this.signIn;
             case "email": return this.email;
             case "password": return this.password;
@@ -235,7 +231,7 @@ public class DialogContent extends ParentPage{
             case "customerMenuDropDown": return this.customerMenuDropDown;
             case "signOut": return this.signOut;
             case "forgetPasswordButton": return this.forgetPasswordButton;
-            case "myAccountButton":return this.myAccountButton;
+            case "myAccountButton": return this.myAccountButton;
             case "manageAddressesButton": return this.manageAddressesButton;
             case "addNewAddressButton": return this.addNewAddressButton;
             case "telephoneInput": return this.telephoneInput;
@@ -276,19 +272,20 @@ public class DialogContent extends ParentPage{
             case "registrationPassword": return this.registrationPassword;
             case "passwordConfirmation": return this.passwordConfirmation;
             case "registerButton": return this.registerButton;
-            case "searchInput": return this.searchInput;
-            case "searchButton": return this.searchButton;
-            case "Man": return this.Man;
-            case "tops": return this.tops;
-            case "jacketsButton": return this.jacketsButton;
-            case "landoGmyJacketImg": return this.landoGmyJacketImg;
-            case "wishAddButton": return this.wishAddButton;
-            case "wishListNotEmpty": return this.wishListNotEmpty;
-            case "wishListProduct": return this.wishListProduct;
-            case "wishRemoveButton": return this.wishRemoveButton;
-
+            case "whatsNew": return this.whatsNew;
+            case "women": return this.women;
+            case "men": return this.men;
+            case "gear": return this.gear;
+            case "training": return this.training;
+            case "sale": return this.sale;
+            case "womenTops": return this.womenTops;
+            case "womenBottoms": return this.womenBottoms;
+            case "homeButton": return this.homeButton;
+            case "menTops": return this.menTops;
+            case "menBottoms": return this.menBottoms;
 
         }
+
         return null;
     }
 }
