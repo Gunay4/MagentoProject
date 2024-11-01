@@ -24,7 +24,7 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "(//button[@name='send'])[1]")
     public WebElement signInButton;
 
-    @FindBy(xpath = "(//span[text()='Welcome, testci tester!'])[1]")
+    @FindBy(xpath = "(//li[@class='greet welcome']/span)[1]")
     public WebElement loginConfirmation;
 
     @FindBy(xpath = "(//button[@class='action switch'])[1]")

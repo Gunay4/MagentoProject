@@ -32,7 +32,6 @@ public class _US01_UserRegistration {
     @And("User enters registration details")
     public void userEntersRegistrationDetails(DataTable dataTable) {
         List<Map<String, String>> registrationData = dataTable.asMaps(String.class, String.class);
-        System.out.println(registrationData.size());
 
         for (Map<String, String> data : registrationData) {
 

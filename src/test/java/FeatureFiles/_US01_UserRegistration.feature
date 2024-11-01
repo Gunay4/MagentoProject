@@ -13,5 +13,5 @@ Feature: User Registration Functionality
       | Janese    | Smithhie | jane.unique986545@example.com | Pass1234             | Pass1234             |
       | Alexy     | Browniee | alex.unique458448@example.com | Password12           | Password12           |
 
-# Test için mail adreslerini değistirin lütfen
+
 

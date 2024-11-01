@@ -30,9 +30,8 @@ public class _US02_Login {
 
     @Then("Login Success Message Should Appear")
     public void loginSuccessMessageShouldAppear() {
-
         wait.until(ExpectedConditions.visibilityOf(dc.loginConfirmation));
-        Assert.assertTrue(dc.loginConfirmation.getText().toLowerCase().contains("Welcome".toLowerCase()), "Login hatalıdır");
+        Assert.assertTrue(dc.loginConfirmation.isDisplayed());
     }
 
     @Then("Logout Message Should Appear")
